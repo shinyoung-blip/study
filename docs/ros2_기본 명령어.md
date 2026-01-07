@@ -15,5 +15,5 @@ ros2 launch <패키지 이름> <launch 파일명>
 ros2 pkg create --build-type ament_python my_package --dependencies rclpy
 ```
 > 패키지 만들기 
->> --build-type ament_python: Python 패키지 생성 시 사용
+>> --build-type ament_python: Python 패키지 생성 시 사용  
 >> --dependencies: 사용할 ROS 2 패키지를 명시 (예: rclpy)
