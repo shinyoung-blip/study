@@ -21,7 +21,8 @@
 ```
 
 ### CMakeLists.txt
-> ROS2의 빌드 시스템인 ament_cmake 사용 -> CMakeLists.txt에 빌드 환경을 기술해 사용
+> 빌드 설정 파일
+>> ROS2의 빌드 시스템인 ament_cmake 사용 -> CMakeLists.txt에 빌드 환경을 기술해 사용
 ```
 -cmake_minimum_required(운영체제에 설치된 cmake의 최소 요구 버전)
 -project(파일 이름)
