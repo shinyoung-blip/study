@@ -13,11 +13,12 @@
 <license>
 <url>: 패키지를 설명하는 웹 페이지/소스코드 저장소 등의 주소 기재
 <author>: 패키지 개발에 차여한 개발자의 이름과 메일주소
-<buildtool_depend>: 빌드 툴 의존성 정의 -> 패키지 빌드 시 필요한 툴 이름
+<buildtool_depend>: 빌드 툴 의존성 정의 -> 패키지 빌드 시 사용하는 도구 선언
 <build_depend>: 패키지 빌드 시 필요한 의존 패키지 이름
 <exec_depend>: 패키지 실행 시 필요한 의존 패키지 이름
 <test_depend>: 패키지 테스트 시 필요한 의존 패키지 이름
 <export>: 위에 없는 태그명을 여기에 다 씀. <build_type>,<rviz>,<rqt_gui>,<deprecated> 등
+// <build_type>은 이 패키지가 어떤 방식, 규칙으로 빌드할지를 정리한 건지를 정의
 ```
 
 ### CMakeLists.txt
