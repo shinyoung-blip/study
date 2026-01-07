@@ -10,6 +10,7 @@ ros2 run <패키지 이름> <실행 파일 이름>
 ros2 launch <패키지 이름> <launch 파일명>
 ```
 > 여러 노드나 실행 환경을 한 번에 실행하고 싶을 때 launch 파일 사용
+***
 ### 패키지 만들기
 ```
 ros2 pkg create --build-type ament_python my_package --dependencies rclpy
