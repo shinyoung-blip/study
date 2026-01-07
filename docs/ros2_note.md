@@ -1,4 +1,4 @@
-# Study 
+#  ros2 package, build
 
 ### package.xml
 > 패키지 설정 파일
