@@ -33,3 +33,4 @@ ros2 pkg list | grep my_package
 ```
 colcon build --symlink-install --packages-select my_package
 ```
+> 패키지 빌드하고 나서, 무조건 적용하는 source 코드 넣어줘야 함.
