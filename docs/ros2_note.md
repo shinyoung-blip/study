@@ -25,18 +25,18 @@
 > 빌드 설정 파일
 >> ROS2의 빌드 시스템인 ament_cmake 사용 -> CMakeLists.txt에 빌드 환경을 기술해 사용
 ```
--cmake_minimum_required(운영체제에 설치된 cmake의 최소 요구 버전)
--project(파일 이름)
--if()
+cmake_minimum_required(운영체제에 설치된 cmake의 최소 요구 버전)
+project(파일 이름)
+if()
   set(언어 사용시 기준이 되는 버전)
 endif()
--if()
+if()
   add_compile_options(컴파일 시 옵션)
 endif()
--find_package(ament 빌드를 할 때 요구되므로 먼저 설치할 패키지)
--rosidl_generate_interfaces(추가할 자신만의 인터페이스 파일)
--include_directories(빌드 옵션: 헤더파일 폴더 지정)
--add_executable(빌드 옵션: 빌드할 때 참조할 코드와 실행파일 이름 지정)
--ament_target_dependencies(빌드에 앞서 우선적으로 생성할 의존성 있는 인터페이스)
--install(설치 옵션)
+find_package(ament 빌드를 할 때 요구되므로 먼저 설치할 패키지)
+rosidl_generate_interfaces(추가할 자신만의 인터페이스 파일)
+include_directories(빌드 옵션: 헤더파일 폴더 지정)
+add_executable(빌드 옵션: 빌드할 때 참조할 코드와 실행파일 이름 지정)
+ament_target_dependencies(빌드에 앞서 우선적으로 생성할 의존성 있는 인터페이스)
+install(설치 옵션)
 ```
