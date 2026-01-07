@@ -20,6 +20,7 @@ ros2 pkg create --build-type ament_python my_package --dependencies rclpy
 
 ### 패키지 빌드 및 적용
 ```
+cd ~/ros2_ws colcon build --symlink-install
 source ~/ros2_ws/insatll/setup.bash
 ```
 ### 설치 확인
