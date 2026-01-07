@@ -7,7 +7,7 @@ export IGN_GAZEBO_RESOURCE_PATH=$IGN_GAZEBO_RESOURCE_PATH:~/gcamp_ros2_ws/src
 >> 이그니션은 패키지 안의 파일을 찾을 때, IGN_GAZEBO_RESOURCE_PATH 라는 환경 변수 참조. 이를 터미널에 알려줘야 함.
 >>> 기존값 : 새값 형태로 누적해서 유지
 
-### 환경 변수 영구 등록
+### 환경 변수 영구 등록하고 싶다면
 ```
 echo 'export IGN_GAZEBO_RESOURCE_PATH=$IGN_GAZEBO_RESOURCE_PATH:~/gcamp_ros2_ws/src' >> ~/.bashrc
 ```
