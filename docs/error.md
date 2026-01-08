@@ -29,3 +29,8 @@ docker ps
 >> -> ( 도커의 포트 포워딩 규칙 6080-> 8080)  
 >> -> [컨테이너 내부: 8080]
 >>> 사용자는 6080으로 접속하고, 도커가 그 요청을 8080으로 번역해서 컨테이너에 전달하고, 컨테이너는 8080 기준으로 응답한다.
+
+# novnc -> 가제보 띄우는 명령 내리기
+```
+docker exec -it -u mousey ros bash -c "export DISPLAY=novnc:0.0 && export LIBGL_ALWAYS_SOFTWARE=1 && ign gazebo shapes.sdf"
+```
