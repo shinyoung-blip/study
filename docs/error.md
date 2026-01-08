@@ -17,3 +17,11 @@ ubuntu@47aaa605749d:~/gcamp_ros2_ws$ ros2 launch motoman_gazebo motoman_gazebo.l
 * 상대 경로 방식으로 인해 생긴 문제 *
 해결방안 : vim에서 :%s/..\/..\/motoman_description/package:\/\/motoman_description/g 로 바꿔주기 (절대경로로)
 ```
+
+## novnc 로딩 문제 발생 
+```
+# docker 내부 확인
+docker ps
+```
+> 컨테이너 내부 주소 = 사용자 pc 주소 일치해야함.
+> 컨테이너 내부 
