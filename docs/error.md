@@ -34,3 +34,11 @@ docker ps
 ```
 docker exec -it -u mousey ros bash -c "export DISPLAY=novnc:0.0 && export LIBGL_ALWAYS_SOFTWARE=1 && ign gazebo shapes.sdf"
 ```
+
+# 파일을 못 찾을 때
+```
+find ~ -name "파일명"
+# 또는 맥 터미널 -> 도커 프로세스에서 확인하고 싶을 때
+docker inspect ros | grep "Source"
+-> 해당 경로로 이동해서 docker-compose up 컨테이너 올리기 
+```
