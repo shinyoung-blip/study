@@ -42,3 +42,13 @@ find ~ -name "파일명"
 docker inspect ros | grep "Source"
 -> 해당 경로로 이동해서 docker-compose up 컨테이너 올리기 
 ```
+
+# bash: ros2: command not found 에러
+```
+ROS 2 기본 명령어 활성화:
+source /opt/ros/humble/setup.bash
+
+작업 공간(Workspace) 설정 활성화:
+source ~/ros2_ws/install/setup.bash
+```
+> 현재 터미널 세션에 ROS 2 환경 설정이 로드되지 않았을 때 발생
