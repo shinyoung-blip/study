@@ -30,5 +30,7 @@ python yolo_live.py
 ```
 
 3. 결과 이미지
- <img width="1502" height="1118" alt="스크린샷 2026-01-29 오후 2 30 56" src="https://github.com/user-attachments/assets/1af5e2a0-7506-4eb9-bf7f-925a719e0a51" /> <img width="1102" height="1025" alt="스크린샷 2026-01-29 오후 2 30 35" src="https://github.com/user-attachments/assets/8377fc22-0c6b-4fd0-af73-96771e3fe054" />
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1af5e2a0-7506-4eb9-bf7f-925a719e0a51" width="45%">
+  <img src="https://github.com/user-attachments/assets/8377fc22-0c6b-4fd0-af73-96771e3fe054" width="45%">
+</p>
