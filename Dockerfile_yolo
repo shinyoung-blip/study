@@ -1,0 +1,20 @@
+# 1. 베이스 환경
+FROM python:3.12-slim
+
+# 2. 시스템 도구 설치
+RUN apt-get update && apt-get install -y \
+    git curl unzip libgl1 libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# 폴더를 만들고(mkdir) 그 안으로 이동해라(cd)
+WORKDIR /app
+
+# 3. 파이썬 라이브러리 (성공했던 버전 고정)
+RUN pip install --upgrade pip && \
+    pip install "numpy<2.0" torch torchvision ultralytics opencv-python 
+# ultralytics(YOLO)를 설치하면 matplotlib, scipy, tqdm, pyyaml 같은 기본 라이브러리들은 의존성에 의해 자동으로 함께 설치됨
+
+# 6. 현재 폴더의 내 코드(yolo_test.py 등) 복사
+COPY . .
+
+CMD ["python", "yolo_test.py"]

@@ -1,0 +1,11 @@
+venv/
+demo-bin-picking/
+test_videos/
+HccePose/
+test_imgs/
+__pycache__/
+*.mp4
+*.pt
+*.zip
+*.jpg
+.DS_Store

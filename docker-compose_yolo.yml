@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  yolo-app:
+    build: 
+      context: .
+      dockerfile: Dockerfile_yolo  # 아까 만든 도커파일 이름
+    container_name: yolo_worker
+    volumes:
+      - .:/app  # 컨테이너 안에서 만든 결과물이 내 맥 폴더에도 바로 생김!
+    stdin_open: true
+    tty: true
+    # command: python yolo_test.py  # 자동으로 실행되길 원하면 주석 해제
