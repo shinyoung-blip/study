@@ -4,6 +4,10 @@
 # 1. 폴더 이동
 cd ~/HCCEPose/yolo_project
 
+# 비어있는 맥 폴더가 도커의 입력 데이터들을 지워버릴 수 있으므로, 맥 폴더에 미리 입력 데이터를 다운받아 놓기
+#demo-bin-picking은 모델이 입력 데이터를 해석하기 위한 설정이 들어있는 폴더이기 때문에 중요함. (객체 ID, 이름, 원본 설계도 )
+huggingface-cli download SEU-WYL/HccePose --include "demo-bin-picking/*" --local-dir . --repo-type dataset
+
 # 2. 가상환경 생성 (이걸 해야 venv 폴더가 생깁니다!)
 python3 -m venv venv
 
