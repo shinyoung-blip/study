@@ -8,6 +8,7 @@ services:
     container_name: yolo_worker
     volumes:
       - .:/app  # 컨테이너 안에서 만든 결과물이 내 맥 폴더에도 바로 생김!
+      # 내 맥북에 이미 데이터(demo-bin-picking 등)가 있다면 -> 도커는 그걸 그대로 씁
       # 새로 세팅하는 경우에는, volumes 코드는 주석처리하기
     stdin_open: true
     tty: true
