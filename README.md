@@ -1,0 +1,24 @@
+1. 내 컴퓨터(로컬) 가상환경 세팅
+```
+# 1. 폴더 이동
+cd ~/HCCEPose/yolo_project
+
+# 2. 가상환경 생성 (이걸 해야 venv 폴더가 생깁니다!)
+python3 -m venv venv
+
+# 3. 가상환경 활성화
+source venv/bin/activate
+
+# 4. 필수 라이브러리 설치(이미 설치가 되어있다면, 패스해도 됨)
+pip install "numpy<2.0" torch torchvision ultralytics opencv-python huggingface_hub bop-toolkit-lib pycocotools ruamel.yaml
+
+2. 도커 실행
+```
+docker-compose up --build
+```
+
+3. 가상화면 활성화 후 스크립트 실행
+```
+source venv/bin/activate
+python yolo_live.py
+```
