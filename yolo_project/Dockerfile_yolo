@@ -11,8 +11,23 @@ WORKDIR /app
 
 # 3. 파이썬 라이브러리 (성공했던 버전 고정)
 RUN pip install --upgrade pip && \
-    pip install "numpy<2.0" torch torchvision ultralytics opencv-python 
+    pip install "numpy<2.0" torch torchvision ultralytics opencv-python \
+    huggingface_hub bop-toolkit-lib pycocotools ruamel.yaml 
 # ultralytics(YOLO)를 설치하면 matplotlib, scipy, tqdm, pyyaml 같은 기본 라이브러리들은 의존성에 의해 자동으로 함께 설치됨
+
+RUN git clone https://github.com/WangYuLin-SEU/HCCEPose.git
+
+# HuggingFace에서 핵심 데이터셋 다운로드 (자동화)
+# --local-dir을 사용하여 경로를 명시적으로 지정합니다.
+RUN huggingface-cli download SEU-WYL/HccePose --include "demo-bin-picking/*" --local-dir . --repo-type dataset && \
+    huggingface-cli download SEU-WYL/HccePose --include "test_imgs/*" --local-dir . --repo-type dataset && \
+    huggingface-cli download SEU-WYL/HccePose --include "test_videos/*" --local-dir . --repo-type dataset
+
+# 5. 파일 정리 자동화
+# bop_toolkit 압축 해제 및 필요한 폴더 복사
+RUN unzip -o HCCEPose/bop_toolkit.zip -d . || true && \
+    cp -r HCCEPose/kasal ./kasal || true && \
+    rm -rf HCCEPose  # 사용이 끝난 클론 폴더는 용량 절약을 위해 삭제
 
 # 6. 현재 폴더의 내 코드(yolo_test.py 등) 복사
 COPY . .
