@@ -1,3 +1,4 @@
+- yolo 설치 및 실행 가이드
 1. 내 컴퓨터(로컬) 가상환경 세팅
 ```
 # 1. 폴더 이동
@@ -11,13 +12,14 @@ source venv/bin/activate
 
 # 4. 필수 라이브러리 설치(이미 설치가 되어있다면, 패스해도 됨)
 pip install "numpy<2.0" torch torchvision ultralytics opencv-python huggingface_hub bop-toolkit-lib pycocotools ruamel.yaml
-
-2. 도커 실행
+```
+2. 실행
+- A. 도커 사용
 ```
 docker-compose up --build
 ```
 
-3. 가상화면 활성화 후 스크립트 실행
+- B. 로컬에서 직접 실행
 ```
 source venv/bin/activate
 python yolo_live.py
