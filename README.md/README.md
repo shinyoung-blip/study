@@ -10,4 +10,4 @@ huggingface-cli download SEU-WYL/HccePose --include "test_videos/*" --local-dir 
 unzip HCCEPose/bop_toolkit.zip -d . || true && \
     cp -r HCCEPose/kasal ./kasal || true
 ```
-(기존 도커파일 참고)[Uploading 스크린샷 2026-01-29 오후 3.47.32.png…]
+!(기존 도커파일 참고)[Uploading 스크린샷 2026-01-29 오후 3.47.32.png…]
