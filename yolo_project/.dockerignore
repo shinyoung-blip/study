@@ -1,0 +1,10 @@
+# 도커 빌드 시 무시할 목록
+venv/
+.venv/
+__pycache__/
+.git/
+.gitignore
+.DS_Store
+*.mp4
+*.jpg
+*.png
