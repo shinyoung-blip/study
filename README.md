@@ -23,20 +23,49 @@ docker-compose up --build
 #### 내 로컬의 가상환경에서 실행하는 경우
 1. 내 컴퓨터(로컬) 가상환경 세팅
 ```
-
+# 1. 프로젝트 폴더 이동
+cd ~/HCCEPose/yolo_project
 
 # 2. 가상환경 생성 (이걸 해야 venv 폴더가 생깁니다!)
 python3 -m venv venv
 
 # 3. 가상환경 활성화
 source venv/bin/activate
+```
+2. 필수 라이브러리 설치
+```
+# pip 자체를 최신 버전으로 업데이트
+pip install --upgrade pip
 
-# 4. 필수 라이브러리 설치(이미 설치가 되어있다면, 패스해도 됨)
-pip install "numpy<2.0" torch torchvision ultralytics opencv-python huggingface_hub bop-toolkit-lib pycocotools ruamel.yaml
+# 핵심 AI 및 영상처리 라이브러리 설치
+pip install "numpy<2.0" torch torchvision torchaudio ultralytics opencv-python
+
+# 데이터 및 유틸리티 라이브러리 설치
+pip install huggingface_hub bop-toolkit-lib pycocotools ruamel.yaml scipy matplotlib tqdm
 ```
-2. 로컬에서 직접 실행
+3. Git 및 HuggingFace 데이터 다운로드
 ```
-source venv/bin/activate
+# 1. GitHub 코드 클론 (이미 폴더가 있다면 생략 가능)
+git clone https://github.com/WangYuLin-SEU/HCCEPose.git
+
+# 2. 핵심 데이터셋 다운로드 (현재 폴더 . 에 저장)
+huggingface-cli download SEU-WYL/HccePose --include "demo-bin-picking/*" --local-dir . --repo-type dataset
+```
+
+4. 파일 정리 및 압축 해제
+```
+# bop_toolkit 압축 해제
+unzip -o HCCEPose/bop_toolkit.zip -d .
+
+# 필요한 부가 폴더 복사
+cp -r HCCEPose/kasal ./kasal
+
+# 사용이 끝난 임시 클론 폴더 삭제 (선택 사항)
+# rm -rf HCCEPose
+```
+
+5. 실행
+```
 python yolo_live.py
 ```
 
