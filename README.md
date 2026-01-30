@@ -9,12 +9,12 @@ cd ~/HCCEPose/yolo_project
 # demo-bin-picking은 모델이 입력 데이터를 해석하기 위한 설정이 들어있는 폴더이기 때문에 중요함. (객체 ID, 이름, 원본 설계도 )
 huggingface-cli download SEU-WYL/HccePose --include "demo-bin-picking/*" --local-dir . --repo-type dataset
 ```
-# 2. 도커 사용 후 실행
+2. 도커 사용 후 실행
 ```
 docker-compose up --build
 ```
 
-# 3. 결과 이미지
+3. 결과 이미지
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1af5e2a0-7506-4eb9-bf7f-925a719e0a51" width="45%">
   <img src="https://github.com/user-attachments/assets/8377fc22-0c6b-4fd0-af73-96771e3fe054" width="45%">
@@ -34,13 +34,13 @@ source venv/bin/activate
 ```
 2. 필수 라이브러리 설치
 ```
-# pip 자체를 최신 버전으로 업데이트
+# 1. pip 자체를 최신 버전으로 업데이트
 pip install --upgrade pip
 
-# 핵심 AI 및 영상처리 라이브러리 설치
+# 2. 핵심 AI 및 영상처리 라이브러리 설치
 pip install "numpy<2.0" torch torchvision torchaudio ultralytics opencv-python
 
-# 데이터 및 유틸리티 라이브러리 설치
+# 3. 데이터 및 유틸리티 라이브러리 설치
 pip install huggingface_hub bop-toolkit-lib pycocotools ruamel.yaml scipy matplotlib tqdm
 ```
 3. Git 및 HuggingFace 데이터 다운로드
@@ -54,13 +54,13 @@ huggingface-cli download SEU-WYL/HccePose --include "demo-bin-picking/*" --local
 
 4. 파일 정리 및 압축 해제
 ```
-# bop_toolkit 압축 해제
+# 1. bop_toolkit 압축 해제
 unzip -o HCCEPose/bop_toolkit.zip -d .
 
-# 필요한 부가 폴더 복사
+# 2. 필요한 부가 폴더 복사
 cp -r HCCEPose/kasal ./kasal
 
-# 사용이 끝난 임시 클론 폴더 삭제 (선택 사항)
+# 3. 사용이 끝난 임시 클론 폴더 삭제 (선택 사항)
 # rm -rf HCCEPose
 ```
 
@@ -69,7 +69,7 @@ cp -r HCCEPose/kasal ./kasal
 python yolo_live.py
 ```
 
-3. 결과 이미지
+6. 결과 이미지
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1af5e2a0-7506-4eb9-bf7f-925a719e0a51" width="45%">
   <img src="https://github.com/user-attachments/assets/8377fc22-0c6b-4fd0-af73-96771e3fe054" width="45%">
