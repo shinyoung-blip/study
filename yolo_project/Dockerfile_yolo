@@ -19,9 +19,7 @@ RUN git clone https://github.com/WangYuLin-SEU/HCCEPose.git
 
 # HuggingFace에서 핵심 데이터셋 다운로드 (자동화)
 # --local-dir을 사용하여 경로를 명시적으로 지정합니다.
-RUN huggingface-cli download SEU-WYL/HccePose --include "demo-bin-picking/*" --local-dir . --repo-type dataset && \
-    huggingface-cli download SEU-WYL/HccePose --include "test_imgs/*" --local-dir . --repo-type dataset && \
-    huggingface-cli download SEU-WYL/HccePose --include "test_videos/*" --local-dir . --repo-type dataset
+RUN huggingface-cli download SEU-WYL/HccePose --include "demo-bin-picking/*" --local-dir . --repo-type dataset
 
 # 5. 파일 정리 자동화
 # bop_toolkit 압축 해제 및 필요한 폴더 복사
