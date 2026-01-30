@@ -12,4 +12,4 @@ services:
       # 새로 세팅하는 경우에는, volumes 코드는 주석처리하기
     stdin_open: true
     tty: true
-    # command: python yolo_test.py  # 자동으로 실행되길 원하면 주석 해제
+    command: python yolo_live.py
