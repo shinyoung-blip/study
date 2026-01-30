@@ -32,4 +32,4 @@ RUN unzip -o HCCEPose/bop_toolkit.zip -d . || true && \
 # 6. 현재 폴더의 내 코드(yolo_test.py 등) 복사
 COPY . .
 
-CMD ["python", "yolo_test.py"]
+CMD ["python", "yolo_live.py"]
