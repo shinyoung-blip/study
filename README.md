@@ -1,9 +1,9 @@
 ## yolo 설치 및 실행 가이드
-#### docker에서 실행하는 경우
 > [!NOTE]
 > 실시간 영상 분석이 목적이므로, huggingface의 SEU-WYL/HccePose에서 test_imgs, test_videos 가져올 필요 없음.   
 > iphone에 IruinWebcam, imac에도 IruinWebcam을 설치함 ~ iphone을 외부 웹캠으로 사용.   
 > `yolo_live.py` 코드 내, `cap = cv2.VideoCapture(1)` 으로 작성해 1 = Iruin Webcam 사용 알리기.
+#### docker에서 실행하는 경우
 
 1. 내 컴퓨터(로컬) 세팅
 ```
@@ -25,11 +25,7 @@ docker-compose up --build
   <img src="https://github.com/user-attachments/assets/8377fc22-0c6b-4fd0-af73-96771e3fe054" width="45%">
 </p>
 
-#### 내 로컬의 가상환경에서 실행하는 경우
-> [!NOTE]
-> 실시간 영상 분석이 목적이므로, huggingface의 SEU-WYL/HccePose에서 test_imgs, test_videos 가져올 필요 없음.   
-> iphone에 IruinWebcam, imac에도 IruinWebcam을 설치함 ~ iphone을 외부 웹캠으로 사용.   
-> `yolo_live.py` 코드 내, `cap = cv2.VideoCapture(0)` 으로 작성해 0 = Mac 내장 웹캠 사용 알리기.   
+#### 내 로컬의 가상환경에서 실행하는 경우  
 1. 내 컴퓨터(로컬) 가상환경 세팅
 ```
 # 1. 프로젝트 폴더 이동
