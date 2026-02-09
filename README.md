@@ -80,5 +80,3 @@ python yolo_live.py
   <img src="https://github.com/user-attachments/assets/8377fc22-0c6b-4fd0-af73-96771e3fe054" width="45%">
 </p>
 
-***
-![GitHub Profile 3D Contrib](https://raw.githubusercontent.com/shinyoung-blip/study/main/profile-3d-contrib/profile-night-rainbow.svg)
