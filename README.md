@@ -81,4 +81,4 @@ python yolo_live.py
 </p>
 
 ***
-![](./profile-3d-contrib/profile-gitblock.svg)
+![GitHub Profile 3D Contrib](https://github.com/shinyoung-blip/study/blob/main/profile-3d-contrib/profile-night-rainbow.svg)
