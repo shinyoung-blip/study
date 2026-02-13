@@ -39,4 +39,3 @@ unzip HccePose/bop_toolkit.zip -d .
 
 open yolo_result_2d.jpg
 ```
-***
